@@ -321,16 +321,12 @@
         margin-inline-start: 0;
         font-size: 10px;
         font-weight: 800;
-        line-height: 1.2; 
+        line-height: 1.2;
         color: #fff;
-        background: color-mix(
-          in oklab,
-          var(--card) 88%,
-          transparent
-        );
+        background: color-mix(in oklab, var(--card) 88%, transparent);
         border: 1px solid #ffffff22;
         border-radius: 999px;
-        padding: 4px 8px; 
+        padding: 4px 8px;
         letter-spacing: 0.2px;
         align-self: flex-start;
       }
@@ -356,7 +352,7 @@
       .story-row.row-2 {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
-      
+
       .story-grid > .story-row:nth-of-type(3).row-2 {
         grid-template-columns: calc(50% + 10px) calc(50% - 10px);
       }
@@ -393,7 +389,7 @@
       .story-img-wide {
         object-fit: cover;
       }
-      
+
       .story-card.rounded {
         border-radius: 34px;
       }
@@ -409,7 +405,7 @@
         border-radius: inherit;
         transition: opacity 0.25s ease;
       }
-      
+
       #stories .story-card,
       #stories .story-card img {
         border-radius: var(--radius);
@@ -417,12 +413,11 @@
       #stories .story-card img {
         object-fit: cover;
       }
-      
+
       #stories .story-card.contain img {
         object-fit: contain !important;
       }
 
-      
       .story-row-tall-pair {
         align-items: center;
         justify-content: center;
@@ -453,17 +448,16 @@
         border-radius: inherit;
       }
 
-      
       .card {
         position: relative;
         aspect-ratio: 1/1;
-        margin: 0 auto; 
-        width: 96%; 
+        margin: 0 auto;
+        width: 96%;
         border-radius: var(--radius);
         background: var(--card);
-        border: 1px solid #2a2f3a; 
+        border: 1px solid #2a2f3a;
         box-shadow: 0 22px 60px rgba(0, 0, 0, 0.4);
-        overflow: hidden; 
+        overflow: hidden;
         cursor: zoom-in;
         transition: 0.18s ease;
       }
@@ -471,14 +465,13 @@
         transform: translateY(-3px);
       }
 
-      
       .card img {
         width: 100%;
         height: 100%;
         display: block;
-        object-fit: cover; 
-        border-radius: 0; 
-        
+        object-fit: cover;
+        border-radius: 0;
+
         transition: opacity 0.25s ease;
       }
 
@@ -492,7 +485,6 @@
         display: none;
       }
 
-      
       h1,
       h2,
       h3,
@@ -523,16 +515,15 @@
           padding: 14px 34px 16px;
         }
       }
-      
+
       .gallery {
         padding: 24px 12px 28px;
       }
-      
+
       .gallery + .gallery {
         margin-top: 32px;
       }
 
-      
       dialog#lightbox {
         border: none;
         padding: 0;
@@ -593,7 +584,6 @@
           max-width: 70vw;
         }
 
-        
         .bg-grid {
           align-items: stretch;
         }
@@ -616,12 +606,11 @@
         cursor: pointer;
       }
 
-      
       @media (max-width: 600px) {
         :root {
           --radius: 14px;
         }
-        
+
         h1,
         h2,
         h3,
@@ -641,18 +630,18 @@
             "Segoe UI",
             Roboto,
             Arial;
-          font-weight: normal; 
-          
-          width: auto; 
+          font-weight: normal;
+
+          width: auto;
           max-width: 100%;
           white-space: normal;
-          overflow-wrap: anywhere; 
+          overflow-wrap: anywhere;
         }
-        
+
         .bar {
           gap: 12px;
         }
-        
+
         .bar.contact-bar {
           flex-direction: row;
           align-items: center;
@@ -668,7 +657,7 @@
             0 0 0 2px color-mix(in oklab, var(--brand) 82%, #000 10%),
             0 6px 18px #0008;
         }
-        
+
         .contact {
           flex-direction: row;
           align-items: center;
@@ -688,7 +677,7 @@
         .contact .c-item a {
           white-space: nowrap;
         }
-        
+
         .contact .c-item[title="Instagram"] a {
           font-family:
             "Cairo",
@@ -703,7 +692,7 @@
           font-size: 13px;
           text-transform: none;
         }
-        
+
         .contact .c-item[title="WhatsApp"] a {
           font-family:
             "Cairo",
@@ -730,7 +719,7 @@
           grid-template-columns: 9fr 16fr;
           gap: 4px;
         }
-        
+
         .story-grid {
           gap: 8px;
         }
@@ -745,7 +734,6 @@
         }
       }
 
-      
       .bg-label {
         font-family:
           "Cairo",
@@ -760,7 +748,6 @@
         text-transform: none;
       }
 
-      
       @media (max-width: 400px) {
         .grid {
           grid-template-columns: repeat(3, 1fr);
@@ -775,7 +762,6 @@
         }
       }
 
-      
       @media (min-width: 1024px) {
         .grid {
           grid-template-columns: repeat(5, 1fr);
@@ -795,7 +781,6 @@
         }
       }
 
-      
       @media (min-width: 1600px) {
         .grid {
           grid-template-columns: repeat(6, 1fr);
@@ -812,14 +797,13 @@
         }
       }
 
-      
       img {
         -webkit-user-drag: none;
         user-drag: none;
         -webkit-touch-callout: none;
         user-select: none;
       }
-      
+
       .anti-ss-on dialog#lightbox .lb-card {
         background: #fff !important;
       }
@@ -918,21 +902,18 @@
       </div>
     </header>
 
-    
     <section class="gallery" id="logos">
       <h2 class="section-title">LOGOS</h2>
       <div id="grid" class="grid"></div>
       <div id="status" class="status">???? ???????�</div>
     </section>
 
-    
     <section class="gallery" id="bgs">
       <h2 class="section-title">PACKAGES</h2>
       <div id="bg-grid" class="bg-grid"></div>
       <div id="bg-status" class="status">???? ???????�</div>
     </section>
 
-    
     <section class="gallery" id="stories">
       <h2 class="section-title">POSTERS</h2>
       <div id="stories-grid" class="story-grid"></div>
@@ -953,39 +934,9 @@
         </div>
       </div>
     </dialog>
+    <script src="logo-files.js"></script>
     <script>
-      // Dynamically load file list from logo folder
-      // This requires the server to provide directory listing (e.g., Apache with mod_autoindex enabled)
-      // For local development, use a server that lists directories, or update the list manually
-      fetch("./tree/main/logo/")
-        .then((response) => response.text())
-        .then((html) => {
-          const parser = new DOMParser();
-          const doc = parser.parseFromString(html, "text/html");
-          const links = doc.querySelectorAll("a");
-          const files = Array.from(links)
-            .map((a) => a.href.split("/").pop())
-            .filter((f) => /\.(png|jpg|jpe?g|webp|svg)$/i.test(f) && f !== "../");
-          window.FILE_LIST = files;
-          init(); // Initialize after loading files
-        })
-        .catch(() => {
-          // Fallback: manually update this list when adding/removing files in logo folder
-          window.FILE_LIST = [
-            "1.jpeg",
-            "2.jpeg",
-            "3.jpeg",
-            "4.jpeg",
-            "5.jpeg",
-            "6.jpeg",
-            "7.jpeg",
-            "8.jpeg",
-            "9.jpeg",
-          ];
-          init(); // Initialize with fallback
-        });
-
-      
+      // window.FILE_LIST is generated from the logo folder by generate_logo_list.js
       window.BGS_LIST = [];
       fetch("packages-photos/")
         .then((response) => response.text())
@@ -1031,7 +982,6 @@
           initBGS();
         });
 
-      
       window.STORIS_LIST = [];
       fetch("posters/")
         .then((response) => response.text())
@@ -1447,35 +1397,50 @@
           "input",
           () => window.__STORIS_ALL__ && renderStories(window.__STORIS_ALL__),
         );
-function init() {
-  setStatus("جاري التحميل...");
-  if (typeof window.FILE_LIST !== "undefined" && window.FILE_LIST.length > 0) {
-    window.__ALL__ = window.FILE_LIST.filter(f => /\.(png|jpe?g|webp|svg)$/i.test(f));
-    render(window.__ALL__);
-  } else {
-    setStatus("لا توجد صور في مجلد logo");
-  }
-}
+      function init() {
+        setStatus("جاري التحميل...");
+        if (
+          typeof window.FILE_LIST !== "undefined" &&
+          window.FILE_LIST.length > 0
+        ) {
+          window.__ALL__ = window.FILE_LIST.filter((f) =>
+            /\.(png|jpe?g|webp|svg)$/i.test(f),
+          );
+          render(window.__ALL__);
+        } else {
+          setStatus("لا توجد صور في مجلد logo");
+        }
+      }
 
-function initBGS() {
-  setBgStatus("جاري التحميل...");
-  if (typeof window.BGS_LIST !== "undefined" && window.BGS_LIST.length > 0) {
-    window.__BGS_ALL__ = window.BGS_LIST.filter(f => /\.(png|jpe?g|webp|svg)$/i.test(f));
-    renderBgs(window.__BGS_ALL__);
-  } else {
-    setBgStatus("لا توجد صور في مجلد packages-photos");
-  }
-}
+      function initBGS() {
+        setBgStatus("جاري التحميل...");
+        if (
+          typeof window.BGS_LIST !== "undefined" &&
+          window.BGS_LIST.length > 0
+        ) {
+          window.__BGS_ALL__ = window.BGS_LIST.filter((f) =>
+            /\.(png|jpe?g|webp|svg)$/i.test(f),
+          );
+          renderBgs(window.__BGS_ALL__);
+        } else {
+          setBgStatus("لا توجد صور في مجلد packages-photos");
+        }
+      }
 
-function initSTORIS() {
-  setStoriesStatus("جاري التحميل...");
-  if (typeof window.STORIS_LIST !== "undefined" && window.STORIS_LIST.length > 0) {
-    window.__STORIS_ALL__ = window.STORIS_LIST.filter(f => /\.(png|jpe?g|webp|svg)$/i.test(f));
-    renderStories(window.__STORIS_ALL__);
-  } else {
-    setStoriesStatus("لا توجد صور في مجلد posters");
-  }
-}
+      function initSTORIS() {
+        setStoriesStatus("جاري التحميل...");
+        if (
+          typeof window.STORIS_LIST !== "undefined" &&
+          window.STORIS_LIST.length > 0
+        ) {
+          window.__STORIS_ALL__ = window.STORIS_LIST.filter((f) =>
+            /\.(png|jpe?g|webp|svg)$/i.test(f),
+          );
+          renderStories(window.__STORIS_ALL__);
+        } else {
+          setStoriesStatus("لا توجد صور في مجلد posters");
+        }
+      }
       // ????? ??? ????? ?? ?????? ?????????
 
       // init(), initBGS(), and initSTORIS() are called after their dynamic fetches complete
@@ -1572,8 +1537,7 @@ function initSTORIS() {
         subtree: true,
       });
     </script>
-    
-    
+
     <div
       id="anti-ss"
       aria-hidden="true"
@@ -1660,4 +1624,3 @@ function initSTORIS() {
     </script>
   </body>
 </html>
-
