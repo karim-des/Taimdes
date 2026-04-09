@@ -957,7 +957,7 @@
       // Dynamically load file list from logo folder
       // This requires the server to provide directory listing (e.g., Apache with mod_autoindex enabled)
       // For local development, use a server that lists directories, or update the list manually
-      fetch("tree/main/logo/")
+      fetch("./tree/main/logo/")
         .then((response) => response.text())
         .then((html) => {
           const parser = new DOMParser();
@@ -1658,7 +1658,6 @@ function initSTORIS() {
         document.addEventListener("touchcancel", end, { passive: true });
       })();
     </script>
-    kk
   </body>
 </html>
 
