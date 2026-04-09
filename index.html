@@ -930,88 +930,44 @@
             class="lb-name"
             style="color: var(--muted); font-size: 13px"
           ></span>
-          <button class="btn" id="close">?????</button>
+          <button class="btn" id="close">Back</button>
         </div>
       </div>
     </dialog>
     <script src="logo-files.js"></script>
     <script>
-      // window.FILE_LIST is generated from the logo folder by generate_logo_list.js
-      window.BGS_LIST = [];
-      fetch("packages-photos/")
-        .then((response) => response.text())
-        .then((html) => {
-          const parser = new DOMParser();
-          const doc = parser.parseFromString(html, "text/html");
-          const links = doc.querySelectorAll("a");
-          const files = Array.from(links)
-            .map((a) => a.href.split("/").pop())
-            .filter((f) => /\.(png|jpe?g|webp|svg)$/i.test(f) && f !== "../");
-          window.BGS_LIST = files;
-          initBGS();
-        })
-        .catch(() => {
-          window.BGS_LIST = [
-            "L1.jpeg",
-            "B1.jpeg",
-            "L2.jpeg",
-            "B2.jpeg",
-            "L3.jpeg",
-            "B3.jpeg",
-            "L4.jpeg",
-            "B4.jpeg",
-            "L5.jpeg",
-            "B5.jpeg",
-            "L6.jpeg",
-            "B6.jpeg",
-            "L7.jpeg",
-            "B7.jpeg",
-            "L8.jpeg",
-            "B8.jpeg",
-            "L9.jpeg",
-            "B9.jpeg",
-            "L10.jpeg",
-            "B10.jpeg",
-            "L11.jpeg",
-            "B12.jpeg",
-            "L13.jpeg",
-            "B13.jpeg",
-            "L14.jpeg",
-            "B14.jpeg",
-          ];
-          initBGS();
-        });
+      // Static image lists
+      window.BGS_LIST = [
+        "L1.jpg",
+        "B1.jpg",
+        "L2.jpg",
+        "B2.jpg",
+        "L3.jpg",
+        "B3.jpg",
+        "L4.jpg",
+        "B4.jpg",
+        "L5.jpg",
+        "B5.jpg",
+        "L6.jpg",
+        "B6.jpg",
+        "L7.jpg",
+        "B7.jpg",
+        "L8.jpg",
+        "B8.jpg",
+        "L9.jpg",
+        "B9.jpg",
+      ];
 
-      window.STORIS_LIST = [];
-      fetch("posters/")
-        .then((response) => response.text())
-        .then((html) => {
-          const parser = new DOMParser();
-          const doc = parser.parseFromString(html, "text/html");
-          const links = doc.querySelectorAll("a");
-          const files = Array.from(links)
-            .map((a) => a.href.split("/").pop())
-            .filter((f) => /\.(png|jpe?g|webp|svg)$/i.test(f) && f !== "../");
-          window.STORIS_LIST = files;
-          initSTORIS();
-        })
-        .catch(() => {
-          window.STORIS_LIST = [
-            "1.jpeg",
-            "2.jpeg",
-            "3.jpeg",
-            "4.jpeg",
-            "5.jpeg",
-            "6.jpeg",
-            "7.jpeg",
-            "8.jpeg",
-            "9.jpeg",
-            "10.jpeg",
-            "11.jpeg",
-            "12.jpeg",
-          ];
-          initSTORIS();
-        });
+      window.STORIS_LIST = [
+        "1.jpg",
+        "2.jpg",
+        "3.jpg",
+        "4.jpg",
+        "5.jpg",
+        "6.jpg",
+        "7.jpg",
+        "8.jpg",
+      ];
 
       window.STORIS_SIZES = {};
 
@@ -1443,7 +1399,9 @@
       }
       // ????? ??? ????? ?? ?????? ?????????
 
-      // init(), initBGS(), and initSTORIS() are called after their dynamic fetches complete
+      init();
+      initBGS();
+      initSTORIS();
 
       // Navigation functionality
       const sections = document.querySelectorAll("section.gallery");
@@ -1551,12 +1509,10 @@
       "
     ></div>
     <script>
-      // ????? ?? ???? ???? ??????? ??????? ???????
       window.__antiSSShow = () => {};
       window.__antiSSHide = () => {};
     </script>
     <script>
-      // ??? ??? ???? ????? ??? ??????? ?? ????? ?????? 1 ?????
       (function () {
         if (!("ontouchstart" in window)) return;
         const isPhone =
