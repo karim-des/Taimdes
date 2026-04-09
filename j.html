@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="ar" dir="rtl">
   <head>
     <meta charset="UTF-8" />
@@ -953,11 +953,14 @@
         </div>
       </div>
     </dialog>
+<script src="logo-list.js"></script>
+<script src="bgs-list.js"></script>
+<script src="stories-list.js"></script>
     <script>
       // Dynamically load file list from logo folder
       // This requires the server to provide directory listing (e.g., Apache with mod_autoindex enabled)
       // For local development, use a server that lists directories, or update the list manually
-      fetch("tree/main/logo/")
+      fetch("./logo/")
         .then((response) => response.text())
         .then((html) => {
           const parser = new DOMParser();
@@ -965,7 +968,7 @@
           const links = doc.querySelectorAll("a");
           const files = Array.from(links)
             .map((a) => a.href.split("/").pop())
-            .filter((f) => /\.(png|jpg|jpe?g|webp|svg)$/i.test(f) && f !== "../");
+            .filter((f) => /\.(png|jpe?g|webp|svg)$/i.test(f) && f !== "../");
           window.FILE_LIST = files;
           init(); // Initialize after loading files
         })
@@ -1656,7 +1659,7 @@ function initSTORIS() {
         document.addEventListener("touchmove", move, { passive: false });
         document.addEventListener("touchend", end, { passive: true });
         document.addEventListener("touchcancel", end, { passive: true });
-      })();
+      })(); 
     </script>
     
   </body>
